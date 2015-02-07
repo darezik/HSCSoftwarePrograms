@@ -1,0 +1,29 @@
+#include <iostream.h>
+#include <conio.h>
+
+int main(){
+int a[] = {1,2,3,4,5,6};
+
+cout << "enter a number to find"<< endl;
+int s;
+cin>>s;
+int up = 6;
+int low = 0;
+while(up>low){
+int mid = (up+low)/2;
+cout<<endl<<endl<<"mid"<<mid<<"low"<<low<<"up"<<up<<endl<<endl;
+if (a[mid] == s)
+{
+  cout<<mid;
+  return 0;
+} else if (a[mid]<s)
+{
+low = mid;
+}else
+{
+up = mid;
+}
+}
+cout<<"not found"<<endl;
+return 0;
+}
